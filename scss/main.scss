@@ -7,21 +7,7 @@
 @import "base/typography";
 @import "base/utilities";
 
-@import "components/bg-video";
 @import "components/button";
-@import "components/card";
-@import "components/composition";
-@import "components/feature-box";
-@import "components/form";
-@import "components/popup";
-@import "components/story";
-@import "components/icon";
-@import "components/review";
-@import "components/marker";
-@import "components/backdrop";
-@import "components/preloader";
-@import "components/article";
-@import "components/progres";
 
 @import "layout/footer";
 @import "layout/grid";
@@ -29,4 +15,4 @@
 @import "layout/navigation";
 @import "layout/gallery";
 
-@import "pages/home";
+@import "pages/home/hero";

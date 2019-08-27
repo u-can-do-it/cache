@@ -66,6 +66,9 @@ a {
     font-size: 2rem;
     font-weight: 400; }
 
+h1 {
+  text-transform: capitalize; }
+
 .u-center-text {
   text-align: center !important; }
 
@@ -100,6 +103,19 @@ a {
 .hidden {
   opacity: 0; }
 
+.btn {
+  display: inline-block;
+  color: #fff;
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 27px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  padding: 2rem 2.5rem; }
+  .btn--orange {
+    background-color: #ff6033; }
+
 .nav {
   position: fixed;
   width: 100%;
@@ -133,5 +149,32 @@ a {
     .nav__item--active {
       border-top: 3px #ff6033 solid; }
 
-.home {
-  padding: 2px; }
+.hero {
+  width: 100%;
+  background-image: url("/../assets/img/header.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 100vh;
+  position: relative; }
+  @media only screen and (min-width: 80em) {
+    .hero {
+      background-position: 0% 35%;
+      background-size: cover; } }
+  .hero__container {
+    position: absolute;
+    max-width: 370px;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%); }
+  .hero__title {
+    color: #262626;
+    font-family: "Raleway";
+    font-size: 6rem;
+    font-weight: bolder; }
+  .hero__btn {
+    margin-top: 3rem; }
+  .hero__scroll {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%); }
