@@ -1,0 +1,24 @@
+.paragraph {
+  color: $color-black;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 2.7rem;
+
+  &--hero {
+    font-weight: 500;
+  }
+
+  &--white {
+    font-weight: 300;
+  }
+
+  &--grey {
+    font-weight: 300;
+    font-size: 1.6rem;
+  }
+
+  &--big {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+}
