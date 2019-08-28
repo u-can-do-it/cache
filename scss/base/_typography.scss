@@ -10,6 +10,7 @@
 
   &--white {
     font-weight: 300;
+    color: $color-white;
   }
 
   &--grey {
@@ -25,4 +26,18 @@
 
 h1 {
   text-transform: capitalize;
+}
+
+.section-title {
+  font-size: 9rem;
+  font-weight: 900;
+  font-family: "Raleway", sans-serif;
+
+  &--white {
+    color: $color-white;
+  }
+
+  &--small {
+    font-size: 3rem;
+  }
 }

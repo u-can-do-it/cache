@@ -57,15 +57,19 @@
   </body>
   <main class="main">
     <section class="about" id="about">
-      <div class="about__container">
-        <div class="about__img">
-          <img src="assets/img/about.png" alt="raspberries in a cup" />
+      <div class="about__container container">
+        <div>
+          <img
+            class="about__img"
+            src="assets/img/about.png"
+            alt="raspberries in a cup"
+          />
         </div>
-        <div class="about__box">
-          <h2 class="section__title section__title--white about__title">
+        <div class="about__text-box u-mb-sm">
+          <h2 class="section-title section-title--white about__title">
             About Us
           </h2>
-          <p class="paragraph about__text">
+          <p class="paragraph paragraph--white about__text">
             Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud
             exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat. Duis aute irure dolor in reprehenderit in voluptate velit
@@ -76,7 +80,53 @@
         </div>
       </div>
     </section>
-    <section class="services" id="services"></section>
+    <section class="services" id="services">
+      <div class="services__container container">
+        <div class="services__box">
+          <ul class="services__list">
+            <li class="services__item">
+              <figcaption class="services__description">
+                Online Shopping
+              </figcaption>
+              <figure class="services__icon">
+                <img src="./assets/icons/cart.svg" alt="shopping cart" />
+              </figure>
+            </li>
+            <li class="services__item">
+              <figcaption class="services__description">
+                Quality Product
+              </figcaption>
+              <figure class="services__icon">
+                <img src="./assets/icons/quality.svg" alt="globe" />
+              </figure>
+            </li>
+            <li class="services__item">
+              <figcaption class="services__description">
+                Domestic & International Delivery
+              </figcaption>
+              <figure class="services__icon">
+                <img src="./assets/icons/globe.svg" alt="globe" />
+              </figure>
+            </li>
+            <li class="services__item">
+              <figcaption class="services__description">
+                Well Organized
+              </figcaption>
+              <figure class="services__icon">
+                <img src="./assets/icons/carrot.svg" alt="carrot" />
+              </figure>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <img
+            src="./assets/img/services.png"
+            alt="sliced tomatoes"
+            class="services__img"
+          />
+        </div>
+      </div>
+    </section>
     <section class="gallery" id="gallery"></section>
     <section class="subscribe" id="subscribe"></section>
     <section class="blog" id="blog"></section>
