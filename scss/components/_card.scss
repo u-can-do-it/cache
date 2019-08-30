@@ -1,0 +1,38 @@
+.card {
+  z-index: 3;
+  list-style: none;
+  position: relative;
+  width: 370px;
+  height: 310px;
+  overflow: hidden;
+
+  &__date {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    width: 60px;
+    height: 60px;
+    text-transform: capitalize;
+    border-radius: 5px;
+    text-align: center;
+    color: $color-white;
+    font-size: 30px;
+
+    &--month {
+      color: $color-white;
+      font-size: 21px;
+      opacity: 1;
+    }
+  }
+
+  &__text-box {
+    position: absolute;
+    max-width: 370px;
+    padding: 2rem;
+    bottom: 0;
+    left: 2rem;
+    transform: translateY(-50%);
+  }
+}

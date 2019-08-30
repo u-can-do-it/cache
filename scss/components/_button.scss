@@ -6,9 +6,31 @@
   font-weight: 300;
   line-height: 27px;
   text-transform: uppercase;
+  border: none;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   padding: 2rem 2.5rem;
+
   &--orange {
     background-color: $color-orange;
+  }
+
+  &--green {
+    background-color: $color-green;
+  }
+
+  &--red {
+    background-color: $color-red;
+  }
+
+  &--big {
+    padding: 1.5rem 4rem;
+  }
+
+  &--subscribe {
+    padding: 1.5rem 3rem;
+  }
+
+  &--blog {
+    padding: 1.5rem 4rem;
   }
 }

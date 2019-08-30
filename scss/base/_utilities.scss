@@ -10,7 +10,7 @@
   margin: 0 auto;
 }
 .u-m-top-big {
-  margin-top: 15rem !important;
+  margin-top: 10rem !important;
   @include respond(phone) {
     margin-top: 5rem !important;
   }
@@ -19,7 +19,7 @@
   margin-top: 1.5rem !important;
 }
 .u-m-top-mid {
-  margin-top: 3rem !important;
+  margin-top: 4rem !important;
   @include respond(phone) {
     margin-top: 2rem !important;
   }

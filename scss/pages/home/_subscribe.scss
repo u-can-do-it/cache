@@ -1,0 +1,38 @@
+.subscribe {
+  background-image: url("../assets/img/subscribe.png");
+  padding: 10rem 0;
+
+  &__text-box {
+    max-width: 570px;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__input {
+    width: 570px;
+    height: 55px;
+    padding: 15px;
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-right: 1.5rem;
+
+    &:focus {
+      border: 1px solid $color-green;
+    }
+
+    &::placeholder {
+      color: $color-grey;
+      font-family: inherit;
+    }
+
+    &-wrapper {
+    }
+  }
+
+  &__btn {
+    width: 155px;
+    height: 55px;
+  }
+}

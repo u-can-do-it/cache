@@ -1,0 +1,47 @@
+.blog {
+  background-color: $color-purple;
+  height: 80vh;
+  &__text-box {
+    max-width: 570px;
+  }
+
+  &__card-box {
+    max-width: 1300px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    margin: 1rem;
+
+    &--1 {
+      background-image: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.9) 0%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        url("../assets/img/blog_1_bg.png");
+    }
+    &--2 {
+      background-image: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.9) 0%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        url("../assets/img/blog_2_bg.png");
+    }
+    &--3 {
+      background-image: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.9) 0%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        url("../assets/img/blog_3_bg.png");
+    }
+  }
+  &__btn {
+    display: flex;
+  }
+}
