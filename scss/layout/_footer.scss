@@ -1,0 +1,9 @@
+.footer {
+  background-color: $color-black;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 16rem;
+  }
+}

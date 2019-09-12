@@ -33,6 +33,20 @@
     padding: 2rem;
     bottom: 0;
     left: 2rem;
-    transform: translateY(-50%);
+  }
+
+  &__title {
+    color: $color-white;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    font-family: "Raleway - Bold";
+  }
+  &__details {
+    margin-top: 1rem;
+    color: $color-white;
+    font-family: "Raleway - Light";
+    font-size: 13px;
+    font-weight: 300;
   }
 }

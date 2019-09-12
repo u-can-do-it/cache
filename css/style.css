@@ -62,6 +62,7 @@ a {
     font-weight: 300;
     color: #ffffff; }
   .paragraph--grey {
+    color: #b9b9b9;
     font-weight: 300;
     font-size: 1.6rem; }
   .paragraph--big {
@@ -117,6 +118,9 @@ h1 {
 .hidden {
   opacity: 0; }
 
+.text-pink {
+  color: #ff2b58; }
+
 .btn {
   display: inline-block;
   color: #ffffff;
@@ -169,8 +173,26 @@ h1 {
     max-width: 370px;
     padding: 2rem;
     bottom: 0;
-    left: 2rem;
-    transform: translateY(-50%); }
+    left: 2rem; }
+  .card__title {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    font-family: "Raleway - Bold"; }
+  .card__details {
+    margin-top: 1rem;
+    color: #ffffff;
+    font-family: "Raleway - Light";
+    font-size: 13px;
+    font-weight: 300; }
+
+.footer {
+  background-color: #262626; }
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 16rem; }
 
 .nav {
   width: 100%;
@@ -204,11 +226,9 @@ h1 {
       border-top: 3px #ff6033 solid; }
 
 .container {
+  padding: 10rem 16rem;
   max-width: 1170px;
   margin: 0 auto; }
-  @media only screen and (min-width: tab-land) {
-    .container {
-      padding: 0; } }
 
 .hero {
   width: 100%;
@@ -333,8 +353,7 @@ h1 {
     height: 55px; }
 
 .blog {
-  background-color: #b07cf7;
-  height: 80vh; }
+  background-color: #b07cf7; }
   .blog__text-box {
     max-width: 570px; }
   .blog__card-box {
@@ -352,4 +371,40 @@ h1 {
     .blog__card--3 {
       background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(255, 255, 255, 0) 100%), url("../assets/img/blog_3_bg.png"); }
   .blog__btn {
+    width: 100%;
+    display: flex;
+    align-content: center; }
+
+.contact {
+  background-image: url("../assets/img/contact.png"); }
+  .contact__text-box {
+    max-width: 400px;
+    margin-bottom: 50px; }
+  .contact__box {
     display: flex; }
+  .contact__form {
+    max-width: 500px; }
+  .contact__input, .contact__text-area {
+    width: 100%;
+    padding: 1.7rem 0 1.7rem 2rem;
+    margin-bottom: 1.5rem;
+    border: 0;
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: all 0.2s ease-in-out;
+    color: #ffffff;
+    background-color: #00c4c4;
+    opacity: 0.6;
+    border: none; }
+    .contact__input:focus, .contact__text-area:focus {
+      border-left: 5px solid #355b82;
+      background-color: #00c4c4;
+      opacity: 1; }
+    .contact__input::placeholder, .contact__text-area::placeholder {
+      font-family: inherit;
+      color: #ffffff;
+      font-weight: 300; }
+  .contact__data {
+    max-width: 320px;
+    margin-left: 170px; }
