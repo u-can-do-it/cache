@@ -3,13 +3,12 @@
   background-image: url("/../assets/img/header.png");
   background-repeat: no-repeat;
   background-position: top;
-
   height: 100vh;
+
   position: relative;
 
   @media only screen and (min-width: 80em) {
     background-position: 0% 35%;
-    background-size: cover;
   }
   &__container {
     position: absolute;

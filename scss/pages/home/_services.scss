@@ -1,11 +1,11 @@
 .services {
   background-color: $color-blue;
-  padding: 3rem auto;
+  padding: 3rem 1rem;
 
   &__container {
     display: flex;
     justify-content: space-around;
-    padding: 10rem 0;
+    flex-wrap: wrap;
   }
 
   &__list {
@@ -50,7 +50,7 @@
     display: flex;
     align-items: center;
     height: 530px;
-
+    padding: 0 1rem;
     background-image: url("../assets/img/services.png");
     background-repeat: no-repeat;
   }

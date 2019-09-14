@@ -3,7 +3,11 @@
   padding-top: 3rem;
   z-index: 1000;
   padding: 0 1rem 0 1rem;
+  position: fixed;
 
+  @include respond(tab-land) {
+    background: $color-white;
+  }
   &__container {
     // max-width: 1170px;
     margin: 0 auto;

@@ -198,7 +198,11 @@ h1 {
   width: 100%;
   padding-top: 3rem;
   z-index: 1000;
-  padding: 0 1rem 0 1rem; }
+  padding: 0 1rem 0 1rem;
+  position: fixed; }
+  @media only screen and (max-width: 78.125em) {
+    .nav {
+      background: #ffffff; } }
   .nav__container {
     margin: 0 auto;
     display: flex;
@@ -226,7 +230,8 @@ h1 {
       border-top: 3px #ff6033 solid; }
 
 .container {
-  padding: 10rem 16rem;
+  padding: 10rem 0;
+  display: block;
   max-width: 1170px;
   margin: 0 auto; }
 
@@ -239,8 +244,7 @@ h1 {
   position: relative; }
   @media only screen and (min-width: 80em) {
     .hero {
-      background-position: 0% 35%;
-      background-size: cover; } }
+      background-position: 0% 35%; } }
   .hero__container {
     position: absolute;
     max-width: 370px;
@@ -262,24 +266,33 @@ h1 {
 
 .about {
   width: 100%;
-  padding: 5rem;
   background-image: radial-gradient(circle 1125px at center, rgba(0, 196, 196, 0.9) 0%, rgba(0, 183, 183, 0.9) 32%, rgba(0, 173, 173, 0.9) 68%, rgba(0, 156, 156, 0.9) 100%); }
   .about__container {
     display: flex;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    @media only screen and (max-width: 78.125em) {
+      .about__container {
+        justify-content: center; } }
   .about__img {
     max-width: 560px; }
   .about__text-box {
-    max-width: 500px; }
+    max-width: 500px;
+    text-align: left; }
+    @media only screen and (max-width: 78.125em) {
+      .about__text-box {
+        max-width: unset;
+        width: 100%;
+        padding: 0 10px; } }
 
 .services {
   background-color: #70bfff;
-  padding: 3rem auto; }
+  padding: 3rem 1rem; }
   .services__container {
     display: flex;
     justify-content: space-around;
-    padding: 10rem 0; }
+    flex-wrap: wrap; }
   .services__box {
     display: flex;
     align-items: center; }
@@ -309,29 +322,41 @@ h1 {
     display: flex;
     align-items: center;
     height: 530px;
+    padding: 0 1rem;
     background-image: url("../assets/img/services.png");
     background-repeat: no-repeat; }
 
 .gallery {
-  background-color: #ffe92f;
-  padding: 10rem 0; }
+  background-color: #ffe92f; }
   .gallery__text-box {
     max-width: 580px;
     margin-bottom: 4.6rem; }
   .gallery__img-grid {
     list-style: none;
     display: flex;
-    width: 1300px;
-    flex-wrap: wrap; }
+    width: 1200px;
+    flex-wrap: wrap;
+    align-items: stretch; }
+    @media only screen and (max-width: 78.125em) {
+      .gallery__img-grid {
+        flex-direction: column;
+        max-width: 600px; } }
   .gallery__item {
-    margin: 15px; }
+    margin: 15px;
+    display: block; }
+    @media only screen and (max-width: 78.125em) {
+      .gallery__item--double {
+        height: 860px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; } }
   .gallery__img {
+    display: block;
     width: 100%;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.31); }
 
 .subscribe {
-  background-image: url("../assets/img/subscribe.png");
-  padding: 10rem 0; }
+  background-image: url("../assets/img/subscribe.png"); }
   .subscribe__text-box {
     max-width: 570px; }
   .subscribe__form {
@@ -376,7 +401,9 @@ h1 {
     align-content: center; }
 
 .contact {
-  background-image: url("../assets/img/contact.png"); }
+  background-image: url("../assets/img/contact.png");
+  background-size: cover;
+  background-position: center; }
   .contact__text-box {
     max-width: 400px;
     margin-bottom: 50px; }

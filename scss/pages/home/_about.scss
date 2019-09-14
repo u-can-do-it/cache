@@ -1,6 +1,6 @@
 .about {
   width: 100%;
-  padding: 5rem;
+
   background-image: radial-gradient(
     circle 1125px at center,
     rgba(0, 196, 196, 0.9) 0%,
@@ -13,6 +13,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    @include respond(tab-land) {
+      justify-content: center;
+    }
   }
 
   &__img {
@@ -21,5 +25,11 @@
 
   &__text-box {
     max-width: 500px;
+    text-align: left;
+    @include respond(tab-land) {
+      max-width: unset;
+      width: 100%;
+      padding: 0 10px;
+    }
   }
 }
