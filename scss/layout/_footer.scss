@@ -3,7 +3,19 @@
 
   &__container {
     display: flex;
+
     justify-content: space-between;
     padding: 4rem 16rem;
+    @include respond(phone) {
+      padding: 1rem 0;
+    }
+
+    @include respond(tab-land) {
+      flex-direction: column;
+      align-items: center;
+      & *:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
   }
 }

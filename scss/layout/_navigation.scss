@@ -1,15 +1,19 @@
 .nav {
   width: 100%;
   padding-top: 3rem;
-  z-index: 1000;
+  z-index: 100;
   padding: 0 1rem 0 1rem;
   position: fixed;
+  background: transparent;
+  transition: all 0.3s;
+  font-size: 50px;
 
-  @include respond(tab-land) {
+  &--scrolled {
     background: $color-white;
+    font-size: 40px;
   }
+
   &__container {
-    // max-width: 1170px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -19,7 +23,7 @@
   &__brand {
     color: $color-black;
     font-family: Pacifico;
-    font-size: 50px;
+    font-size: inherit;
     font-weight: 400;
   }
 
@@ -27,6 +31,24 @@
     display: flex;
     list-style: none;
     justify-content: space-between;
+    @include respond(tab-port) {
+      z-index: -1;
+      flex-direction: column;
+      position: absolute;
+      text-align: center;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      padding-top: 75px;
+      background: white;
+      display: none;
+      opacity: 0;
+      transition: all 0.3s;
+    }
+    &--active {
+      display: block;
+      opacity: 1;
+    }
   }
 
   &__item {
@@ -39,10 +61,40 @@
 
     &:not(:last-child) {
       margin-right: 3.75rem;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+      }
     }
 
     &--active {
       border-top: 3px $color-orange solid;
+      @include respond(tab-port) {
+        border-top: none;
+      }
+    }
+  }
+  &__link {
+    @include respond(tab-port) {
+      padding: 8px 20px;
+    }
+  }
+  &-mobile__button {
+    display: none;
+    width: 30px;
+    height: 15px;
+    border: none;
+    border-top: 2px solid $color-black;
+    border-bottom: 2px solid $color-black;
+    background-color: transparent;
+    outline: none;
+    transition: 0.1s;
+
+    @include respond(tab-port) {
+      display: block;
+    }
+    &:active {
+      transform: scale(1.3);
     }
   }
 }

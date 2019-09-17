@@ -1,12 +1,27 @@
 .subscribe {
   background-image: url("../assets/img/subscribe.png");
 
+  &__container {
+    @include respond(tab-land) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
   &__text-box {
     max-width: 570px;
+    margin-bottom: 1rem;
+    @include respond(tab-land) {
+      text-align: center;
+    }
   }
 
   &__form {
     display: flex;
+    @include respond(tab-land) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__input {
@@ -16,6 +31,11 @@
     font-size: 1.5rem;
     display: inline-block;
     margin-right: 1.5rem;
+    margin-bottom: 1rem;
+
+    @include respond(phone) {
+      width: 100%;
+    }
 
     &:focus {
       border: 1px solid $color-green;
@@ -24,9 +44,6 @@
     &::placeholder {
       color: $color-grey;
       font-family: inherit;
-    }
-
-    &-wrapper {
     }
   }
 

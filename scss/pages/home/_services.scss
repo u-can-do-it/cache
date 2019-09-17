@@ -53,5 +53,9 @@
     padding: 0 1rem;
     background-image: url("../assets/img/services.png");
     background-repeat: no-repeat;
+    @include respond(phone) {
+      width: 100vw;
+      padding: 0;
+    }
   }
 }

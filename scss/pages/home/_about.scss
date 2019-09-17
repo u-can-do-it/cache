@@ -21,6 +21,9 @@
 
   &__img {
     max-width: 560px;
+    @include respond(phone) {
+      width: 100vw;
+    }
   }
 
   &__text-box {

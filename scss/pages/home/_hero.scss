@@ -1,21 +1,23 @@
 .hero {
+  position: relative;
   width: 100%;
   background-image: url("/../assets/img/header.png");
   background-repeat: no-repeat;
   background-position: top;
+  background-size: cover;
   height: 100vh;
 
-  position: relative;
-
-  @media only screen and (min-width: 80em) {
-    background-position: 0% 35%;
+  @include respond(phone) {
+    background-position: 30% -0%;
   }
   &__container {
     position: absolute;
-    max-width: 370px;
     top: 50%;
-    left: 20%;
+    left: 200px;
     transform: translateY(-50%);
+    @include respond(tab-land) {
+      left: 50px;
+    }
   }
 
   &__title {
@@ -23,9 +25,19 @@
     font-family: "Raleway";
     font-size: 6rem;
     font-weight: bolder;
+    @include respond(phone) {
+      font-size: 4rem;
+    }
   }
 
   &__text {
+    max-width: 500px;
+    @include respond(tab-land) {
+      max-width: 350px;
+    }
+
+    @include respond(phone) {
+    }
   }
 
   &__btn {
