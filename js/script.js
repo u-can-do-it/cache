@@ -1,6 +1,18 @@
 // Navbar onscroll animation
 const nav = document.querySelector(".nav");
+function smallScreenCheck() {
+  if (document.documentElement.clientHeight <= 400) {
+    nav.classList.add("nav--scrolled");
+    return true;
+  } else {
+    return false;
+  }
+}
+smallScreenCheck();
 function navScrollHandler(YOffset) {
+  if (smallScreenCheck()) {
+    return;
+  }
   if (YOffset > 150) {
     nav.classList.add("nav--scrolled");
   } else {
@@ -26,22 +38,18 @@ links.forEach(link => {
 // Current section indicator
 const navItems = document.querySelectorAll(".nav__item");
 
-const hero = document.querySelector(".hero").offsetTop - 200;
-const about = document.querySelector(".about").offsetTop - 200;
-const services = document.querySelector(".services").offsetTop - 200;
-const gallery = document.querySelector(".gallery").offsetTop - 200;
-const blog = document.querySelector(".blog").offsetTop - 200;
-const contact = document.querySelector(".contact").offsetTop - 200;
+function indicateHandler(offset) {
+  const hero = document.querySelector(".hero").offsetTop;
+  const about = document.querySelector(".about").offsetTop;
+  const services = document.querySelector(".services").offsetTop;
+  const gallery = document.querySelector(".gallery").offsetTop;
+  const blog = document.querySelector(".blog").offsetTop;
+  const contact = document.querySelector(".contact").offsetTop;
 
-function activateNavItem(index) {
-  navItems.forEach(item => item.classList.remove("nav__item--active"));
-  navItems[index].classList.add("nav__item--active");
-}
-
-// Scroll handle
-window.addEventListener("scroll", () => {
-  let offset = window.pageYOffset;
-  navScrollHandler(offset);
+  function activateNavItem(index) {
+    navItems.forEach(item => item.classList.remove("nav__item--active"));
+    navItems[index].classList.add("nav__item--active");
+  }
 
   switch (true) {
     case offset >= about && offset < services:
@@ -62,4 +70,12 @@ window.addEventListener("scroll", () => {
     default:
       activateNavItem(0);
   }
+}
+
+// Scroll handler
+window.addEventListener("scroll", () => {
+  let offset = window.pageYOffset + 50;
+  navScrollHandler(offset);
+
+  indicateHandler(offset);
 });
