@@ -57,7 +57,7 @@
         <img src="assets/icons/scroll.png" alt="scroll icon" />
       </div>
     </header>
-  </body>
+ 
   <main class="main">
     <section class="about" id="about">
       <div class="about__container container">
@@ -122,7 +122,7 @@
           </ul>
         </div>
         <div class="services__title">
-          <h2 class="section-title section-title--white ">
+          <h2 class="section-title section-title--white  ">
             Our Services
           </h2>
         </div>
@@ -260,15 +260,15 @@
           </p>
         </div>
         <div class="contact__box">
-          <form class="contact__form">
+          <form class="contact__form" acton=''>
      
-                <input type="text" name="name" id="name" class="contact__input" placeholder="Auskteez Tran">
-                <input type="email" name="name" id="name" class="contact__input" placeholder="Your email...">
-                <input type="tel" name="name" id="name" class="contact__input" placeholder="Your phone number...">
-                <textarea type="text" name="name" id="name" class="contact__text-area" placeholder="Your messge..."></textarea>
-        
+                <input type="text" required name="name" id="name" class="contact__input" placeholder="Auskteez Tran">
+                <input type="email" required name="email" id="email" class="contact__input" placeholder="Your email...">
+                <input type="tel" name="phone" id="phone" class="contact__input" placeholder="Your phone number...">
+                <textarea type="text" required name="message" id="message" class="contact__text-area" placeholder="Your messge..."></textarea>
+                <input type="submit" value="Submit" class="btn btn--turquoise">
           </form>
-          <div class="contact__data">
+          <div class="contact__data" >
               <h5 class="contact__subtitle">Address</h5>
               <p class="paragraph paragraph--big">
                   123 City name, Street, City, Country
@@ -282,6 +282,7 @@
                   +012 345 6789
                 </p>
           </div>
+          
         </div>
       </div>
     </section>
@@ -301,4 +302,5 @@
     </footer>
   </main>
   <script src="./js/script.js"></script>
+</body>
 </html>

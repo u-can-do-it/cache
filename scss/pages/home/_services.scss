@@ -1,6 +1,9 @@
 .services {
   background-color: $color-blue;
   padding: 3rem 1rem;
+  @include respond(phone) {
+    padding: 0;
+  }
 
   &__container {
     display: flex;
@@ -44,18 +47,25 @@
     width: 10rem;
     border-left: 1px solid $color-grey;
     padding: 0 2rem;
+    @include respond(phone) {
+      max-width: 10rem;
+    }
   }
 
   &__title {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 530px;
-    padding: 0 1rem;
+
     background-image: url("../assets/img/services.png");
     background-repeat: no-repeat;
+
     @include respond(phone) {
-      width: 100vw;
-      padding: 0;
+      width: 100%;
+    }
+    @include respond(tab-land) {
+      order: -1;
     }
   }
 }

@@ -9,6 +9,7 @@
   border: none;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   padding: 2rem 2.5rem;
+  transition: all 0.3s;
 
   &--orange {
     background-color: $color-orange;
@@ -20,6 +21,16 @@
 
   &--red {
     background-color: $color-red;
+  }
+
+  &--turquoise {
+    background-color: $color-turquoise;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
   }
 
   &--big {

@@ -134,13 +134,20 @@ h1 {
   text-transform: uppercase;
   border: none;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  padding: 2rem 2.5rem; }
+  padding: 2rem 2.5rem;
+  transition: all 0.3s; }
   .btn--orange {
     background-color: #ff6033; }
   .btn--green {
     background-color: #96b92c; }
   .btn--red {
     background-color: #f72b3b; }
+  .btn--turquoise {
+    background-color: #00c4c4;
+    opacity: 0.8; }
+    .btn--turquoise:hover {
+      opacity: 1;
+      cursor: pointer; }
   .btn--big {
     padding: 1.5rem 4rem; }
   .btn--subscribe {
@@ -208,7 +215,6 @@ h1 {
 
 .nav {
   width: 100%;
-  padding-top: 3rem;
   z-index: 100;
   padding: 0 1rem 0 1rem;
   position: fixed;
@@ -243,12 +249,12 @@ h1 {
         left: 0;
         padding-top: 75px;
         background: white;
-        display: none;
         opacity: 0;
+        transform: translateY(-100%);
         transition: all 0.3s; } }
     .nav__list--active {
-      display: block;
-      opacity: 1; }
+      opacity: 1;
+      transform: translateY(0); }
   .nav__item {
     color: #262626;
     font-family: Raleway;
@@ -366,6 +372,9 @@ h1 {
 .services {
   background-color: #70bfff;
   padding: 3rem 1rem; }
+  @media only screen and (max-width: 40em) {
+    .services {
+      padding: 0; } }
   .services__container {
     display: flex;
     justify-content: space-around;
@@ -395,17 +404,22 @@ h1 {
     width: 10rem;
     border-left: 1px solid #9d9d9d;
     padding: 0 2rem; }
+    @media only screen and (max-width: 40em) {
+      .services__icon {
+        max-width: 10rem; } }
   .services__title {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 530px;
-    padding: 0 1rem;
     background-image: url("../assets/img/services.png");
     background-repeat: no-repeat; }
     @media only screen and (max-width: 40em) {
       .services__title {
-        width: 100vw;
-        padding: 0; } }
+        width: 100%; } }
+    @media only screen and (max-width: 78.125em) {
+      .services__title {
+        order: -1; } }
 
 .gallery {
   background-color: #ffe92f; }
