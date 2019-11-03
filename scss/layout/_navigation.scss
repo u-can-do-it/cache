@@ -25,6 +25,7 @@
     font-family: Pacifico;
     font-size: inherit;
     font-weight: 400;
+    cursor: pointer;
   }
 
   &__list {
@@ -39,7 +40,7 @@
       width: 100vw;
       top: 0;
       left: 0;
-      padding-top: 75px;
+      padding-top: 80px;
       background: white;
       opacity: 0;
       transform: translateY(-100%);
@@ -78,6 +79,7 @@
   &__link {
     @include respond(tab-port) {
       padding: 8px 20px;
+      font-size: 18px;
     }
   }
   &-mobile__button {
@@ -90,6 +92,7 @@
     background-color: transparent;
     outline: none;
     transition: 0.1s;
+    cursor: pointer;
 
     @include respond(tab-port) {
       display: block;

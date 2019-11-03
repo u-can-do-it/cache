@@ -125,17 +125,35 @@ h1 {
   color: #ff2b58; }
 
 .btn {
+  position: relative;
   display: inline-block;
   color: #ffffff;
   font-family: Raleway;
   font-size: 20px;
   font-weight: 300;
-  line-height: 27px;
   text-transform: uppercase;
   border: none;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   padding: 2rem 2.5rem;
-  transition: all 0.3s; }
+  transition: all 0.1s;
+  cursor: pointer; }
+  .btn:before {
+    content: "";
+    position: absolute;
+    bottom: 2.1rem;
+    left: 2.5rem;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.3s; }
+  .btn:active {
+    transform: scale(0.9); }
+  .btn:visited, .btn:link {
+    outline: none; }
+  .btn:hover {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5); }
+  .btn:hover::before {
+    width: calc(100% - 5rem); }
   .btn--orange {
     background-color: #ff6033; }
   .btn--green {
@@ -146,14 +164,7 @@ h1 {
     background-color: #00c4c4;
     opacity: 0.8; }
     .btn--turquoise:hover {
-      opacity: 1;
-      cursor: pointer; }
-  .btn--big {
-    padding: 1.5rem 4rem; }
-  .btn--subscribe {
-    padding: 1.5rem 3rem; }
-  .btn--blog {
-    padding: 1.5rem 4rem; }
+      opacity: 1; }
 
 .card {
   z-index: 3;
@@ -233,7 +244,8 @@ h1 {
     color: #262626;
     font-family: Pacifico;
     font-size: inherit;
-    font-weight: 400; }
+    font-weight: 400;
+    cursor: pointer; }
   .nav__list {
     display: flex;
     list-style: none;
@@ -247,7 +259,7 @@ h1 {
         width: 100vw;
         top: 0;
         left: 0;
-        padding-top: 75px;
+        padding-top: 80px;
         background: white;
         opacity: 0;
         transform: translateY(-100%);
@@ -275,7 +287,8 @@ h1 {
           border-top: none; } }
   @media only screen and (max-width: 50em) {
     .nav__link {
-      padding: 8px 20px; } }
+      padding: 8px 20px;
+      font-size: 18px; } }
   .nav-mobile__button {
     display: none;
     width: 30px;
@@ -285,7 +298,8 @@ h1 {
     border-bottom: 2px solid #262626;
     background-color: transparent;
     outline: none;
-    transition: 0.1s; }
+    transition: 0.1s;
+    cursor: pointer; }
     @media only screen and (max-width: 50em) {
       .nav-mobile__button {
         display: block; } }

@@ -18,7 +18,7 @@
   <body>
     <nav class="nav">
       <div class="nav__container">
-        <a class="nav__brand">Cahee</a>
+        <a class="nav__brand" href="\">Cahee</a>
        <div class="nav-mobile">
           <button class="nav-mobile__button"></button>
        </div>
@@ -174,12 +174,13 @@
             aliqua. Ut enim ad minim veniam.
           </p>
         </div>
-        <form class="subscribe__form form">
+        <form class="subscribe__form form" method="GET" id="subscribe-form" action="/subscribed">
           <div class="subscribe__input-wrapper">
-            <input type="email" name="email" id="email" class="input subscribe__input" placeholder="Your email address...">
+            <input type="email" required name="email" id="" class="input subscribe__input" placeholder="Your email address...">
           </div>
-          <input type="submit" value="Subscribe" class="btn btn--green btn--subscribe subscribe__btn">
+         
         </form>
+        <button class="btn  btn--green" type="submit" form="subscribe-form">SUBSCRIBE</button>
       </div>
     </section>
     <section class="blog" id="blog">
@@ -242,7 +243,7 @@
           </li>
         </ul>
         <div class="blog__btn ">
-          <a href="#" class="btn btn--red btn--blog  u-m-top-small u-box-center">View more</a>
+          <a href="#" class="btn btn--red u-m-top-small u-box-center">View more</a>
          
         </div>
         
@@ -260,15 +261,15 @@
           </p>
         </div>
         <div class="contact__box">
-          <form class="contact__form" acton=''>
+          <form class="contact__form" acton='\' id="contact-form">
      
                 <input type="text" required name="name" id="name" class="contact__input" placeholder="Auskteez Tran">
                 <input type="email" required name="email" id="email" class="contact__input" placeholder="Your email...">
                 <input type="tel" name="phone" id="phone" class="contact__input" placeholder="Your phone number...">
                 <textarea type="text" required name="message" id="message" class="contact__text-area" placeholder="Your messge..."></textarea>
-                <input type="submit" value="Submit" class="btn btn--turquoise">
+                <button class="btn btn--turquoise" type="submit" form="contact-form">SUBMIT</button>
           </form>
-          <div class="contact__data" >
+          <div class="contact__data"  >
               <h5 class="contact__subtitle">Address</h5>
               <p class="paragraph paragraph--big">
                   123 City name, Street, City, Country

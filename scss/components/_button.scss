@@ -1,16 +1,44 @@
 .btn {
+  position: relative;
   display: inline-block;
   color: $color-white;
   font-family: Raleway;
   font-size: 20px;
   font-weight: 300;
-  line-height: 27px;
+
   text-transform: uppercase;
   border: none;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   padding: 2rem 2.5rem;
-  transition: all 0.3s;
+  transition: all 0.1s;
+  cursor: pointer;
 
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 2.1rem;
+    left: 2.5rem;
+    width: 0;
+    height: 2px;
+    background-color: $color-white;
+    transition: all 0.3s;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  &:visited,
+  &:link {
+    outline: none;
+  }
+
+  &:hover {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  }
+  &:hover::before {
+    width: calc(100% - 5rem);
+  }
   &--orange {
     background-color: $color-orange;
   }
@@ -29,19 +57,6 @@
 
     &:hover {
       opacity: 1;
-      cursor: pointer;
     }
-  }
-
-  &--big {
-    padding: 1.5rem 4rem;
-  }
-
-  &--subscribe {
-    padding: 1.5rem 3rem;
-  }
-
-  &--blog {
-    padding: 1.5rem 4rem;
   }
 }
